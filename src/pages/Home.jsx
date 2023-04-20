@@ -1,8 +1,8 @@
 //Routes
-import Banner from "../components/Banner";
+import Nav from "../components/Nav/Nav";
 
 function App() {
-  return <Banner />;
+  return <Nav />;
 }
 
 export default App;
