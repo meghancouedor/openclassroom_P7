@@ -1,8 +1,9 @@
-//Routes
-import Nav from "../components/Nav/Nav";
-
 function App() {
-  return <Nav />;
+  return (
+    <div>
+      <h1>Home</h1>
+    </div>
+  );
 }
 
 export default App;

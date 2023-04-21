@@ -2,6 +2,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
+//Import Header et Footer
+import Nav from "./components/Nav/Nav";
+
 //Import style
 import "./style/index.css";
 
@@ -13,6 +16,7 @@ import Error from "./pages/Error";
 function App() {
   return (
     <div className="App">
+      <Nav />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
