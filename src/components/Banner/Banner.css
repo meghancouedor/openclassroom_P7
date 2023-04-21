@@ -1,0 +1,38 @@
+.banner-container {
+  position: relative;
+  border-radius: 25px;
+  height: 223px;
+  margin-bottom: 35px;
+  margin: 20px 0;
+}
+
+.banner-img {
+  border-radius: 25px;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.banner-filter {
+  position: absolute;
+  background-color: #000000;
+  height: 223px;
+  opacity: 30%;
+  border-radius: 25px;
+  top: 0;
+  width: 100%;
+}
+
+.banner-txt {
+  position: absolute;
+  top: 0;
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 20%;
+  margin-left: 23%;
+  line-height: 142.6%;
+}
