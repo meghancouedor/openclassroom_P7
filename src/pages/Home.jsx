@@ -6,6 +6,7 @@ function App() {
   return (
     <div>
       <Banner image={banniereHome} texte="Chez vous, partout et ailleurs" />
+
       <h1>Home</h1>
     </div>
   );

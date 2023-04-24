@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 //Import Header et Footer
 import Nav from "./components/Nav/Nav";
+import Footer from "./components/Footer/Footer";
 
 //Import style
 import "./style/index.css";
@@ -24,6 +25,7 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }
