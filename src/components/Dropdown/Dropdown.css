@@ -1,24 +1,41 @@
 .dropdown-container {
   border-radius: 5px;
-  margin-bottom: 35px;
-  margin: auto;
+  margin-bottom: 25px;
 }
 
 .dropdown-banner {
+  position: relative;
   align-items: center;
   background-color: #ff6060;
   border-radius: 5px;
   display: flex;
+  justify-content: space-between;
   height: 47px;
+  padding: 0 20px;
 }
 
-.dropdown-fleche {
+.dropdown-arrow {
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
 }
 
-.dropdown-fleche.true {
+.dropdown-arrow.true {
   transform: rotate(180deg);
+}
+
+.dropdown-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.dropdown-txt {
+  color: #ff6060;
+  font-size: 24px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin-top: -10px;
+  padding: 30px 20px 20px 20px;
 }

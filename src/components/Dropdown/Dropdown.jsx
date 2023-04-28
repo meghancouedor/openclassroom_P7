@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import "./Dropdown.css";
-import Fleche from "../../assets/fleche.svg";
+import Arrow from "../../assets/fleche.svg";
 
 function Dropdown({ titre, description }) {
+  //la card est fermée
   const [open, setOpen] = useState(false);
   return (
     <div className="dropdown-container" id={`dropdown-${titre}`}>
       <div className="dropdown-banner">
         <div className="dropdown-title">{titre}</div>
         <span
-          className={`dropdown-fleche ${open}`}
+          className={`dropdown-arrow ${open}`}
           onClick={() => setOpen(!open)}
         >
-          <img src={Fleche} alt="Flèche ouverture description" />
+          <img src={Arrow} alt="Flèche ouverture description" />
         </span>
       </div>
       {
-        //S'ouvre lorsqu'il est à True
+        //S'ouvre lorsqu'elle est à true
         open && <div className="dropdown-txt">{description}</div>
       }
     </div>
