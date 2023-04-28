@@ -35,3 +35,18 @@
   margin-left: 23%;
   line-height: 142.6%;
 }
+
+@media screen and (max-width: 1000px) {
+  .banner-container {
+    height: 111px;
+  }
+
+  .banner-filter {
+    height: 111px;
+  }
+
+  .banner-txt {
+    font-size: 24px;
+    margin-left: 30px;
+  }
+}

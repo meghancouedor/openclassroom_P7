@@ -19,10 +19,16 @@ header {
 .link-menu {
   list-style: none;
   color: #ff6060;
-  cursor: pointer;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   text-decoration: none;
   margin-right: 6rem;
+}
+
+@media screen and (max-width: 750px) {
+  .link-menu {
+    font-size: 20px;
+    margin-right: 2rem;
+  }
 }

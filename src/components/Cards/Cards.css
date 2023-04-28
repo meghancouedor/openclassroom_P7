@@ -6,3 +6,11 @@
   gap: 50px 60px;
   padding: 55px 50px;
 }
+
+@media screen and (max-width: 750px) {
+  .home-cards {
+    background-color: #ffffff;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}

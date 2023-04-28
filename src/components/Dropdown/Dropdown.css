@@ -1,0 +1,24 @@
+.dropdown-container {
+  border-radius: 5px;
+  margin-bottom: 35px;
+  margin: auto;
+}
+
+.dropdown-banner {
+  align-items: center;
+  background-color: #ff6060;
+  border-radius: 5px;
+  display: flex;
+  height: 47px;
+}
+
+.dropdown-fleche {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.dropdown-fleche.true {
+  transform: rotate(180deg);
+}
