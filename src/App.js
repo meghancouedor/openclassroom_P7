@@ -13,6 +13,7 @@ import "./style/index.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./pages/Error";
+import FicheLogement from "./pages/FicheLogement";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/logement/:id" element={<FicheLogement />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Error />} />
         </Routes>
