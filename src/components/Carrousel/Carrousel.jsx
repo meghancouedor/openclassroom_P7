@@ -1,42 +1,68 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./Carrousel.css";
-import ArrowRight from "../../assets/FlecheDroite.svg";
-import ArrowLeft from "../../assets/FlecheGauche.svg";
+import FlecheG from "../../assets/FlecheGauche.svg";
+import FlecheD from "../../assets/FlecheDroite.svg";
 
-function Carrousel({ imageSlider }) {
-  //Fonctions permettant de passer d'une slide à une autre
-  const [Index, setIndex] = useState(0);
+const Caroussel = ({ thisLogement }) => {
+  const [current, setcurrent] = useState(0);
+  const length = thisLogement.pictures.length;
 
   const nextSlide = () => {
-    setIndex(Index + 1);
-    if (Index === imageSlider.length - 1) setIndex(0);
+    setcurrent(current === length - 1 ? 0 : current + 1);
+    console.log(current);
+    console.log(length);
   };
 
-  const previousSlide = () => {
-    setIndex(Index - 1);
-    if (Index === 0) setIndex(imageSlider.length - 1);
+  const prevSlide = () => {
+    setcurrent(current === 0 ? length - 1 : current - 1);
+    console.log(current);
   };
+
+  const showArray = length === 1 ? true : false;
+
+  if (
+    !Array.isArray(thisLogement.pictures) ||
+    thisLogement.pictures.length <= 0
+  ) {
+    return null;
+  }
 
   return (
-    <section className="carrousel-container">
-      <img
-        classname="carrousel-picture"
-        alt="bannière logement"
-        //Mettre la photo de la bannière correspondant???
-      />
-      <img
-        className="carousel-arrow arrow-right"
-        src={ArrowRight}
-        alt="Flèche page suivante"
-        onClick={nextSlide}
-      />
-      <img
-        className="carousel-arrow arrow-left"
-        src={ArrowLeft}
-        alt="Flèche page précédente"
-        onClick={previousSlide}
-      />
-    </section>
+    <div className="slider">
+      {!showArray ? (
+        <div>
+          <img
+            onClick={prevSlide}
+            className="left-arrow"
+            src={FlecheG}
+            alt="fleche a gauche"
+          />
+          <img
+            onClick={nextSlide}
+            className="right-arrow"
+            src={FlecheD}
+            alt="fleche a droite"
+          />
+        </div>
+      ) : null}
+      {thisLogement.pictures.map((slide, index) => {
+        return (
+          <div
+            className={index === current ? "slide active" : "slide"}
+            key={index}
+          >
+            {index === current && (
+              <img src={slide} alt="logement" className="image" />
+            )}
+          </div>
+        );
+      })}
+
+      <p className="current">
+        {current + 1}/{length}
+      </p>
+    </div>
   );
-}
-export default Carrousel;
+};
+
+export default Caroussel;
