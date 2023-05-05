@@ -3,12 +3,13 @@ import "./FicheLogement.css";
 import datas from "../../data/annonces.json";
 
 //Importation des éléments
-//import Dropdown from "../components/Dropdown/Dropdown";
 //import Carrousel from "../../components/Carrousel/Carrousel";
 import Tags from "../../components/Tags/Tags";
+import Notation from "../../components/Notation/Notation";
+import Dropdown from "../../components/Dropdown/Dropdown";
 
 function FicheLogement() {
-  //Récupération de l'id
+  //Récupération de l'id et données
   const idLogement = useParams();
   const dataLogement = datas.find((logement) => logement.id === idLogement.id);
 
@@ -33,10 +34,24 @@ function FicheLogement() {
               alt="Profil propriétaire"
             />
           </div>
+          <div className="fiche-notation">
+            <Notation score={dataLogement.rating} />
+          </div>
         </div>
+      </div>
+      <div className="profil-dropdown">
+        <Dropdown titre="Description" description={dataLogement.description} />
+        <Dropdown titre="Équipements" description={dataLogement.equipments} />
       </div>
     </div>
   );
 }
+
+//Dropdown autre méthode pour retour automatique à la ligne
+//  {
+//content.map((element, index) => {
+//return (<p className='equipement-content' key={"equip-"+index.toString()}>{element}</p>)
+//})
+//}
 
 export default FicheLogement;

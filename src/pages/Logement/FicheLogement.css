@@ -48,3 +48,30 @@
   height: 64px;
   border-radius: 50%;
 }
+
+.profil-dropdown {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 0 75px;
+  line-height: 25.67px;
+}
+
+.profil-dropdown > .dropdown-container {
+  width: 50%;
+}
+
+.profil-dropdown .dropdown-title {
+  font-size: 18px;
+}
+
+.profil-dropdown .dropdown-txt {
+  font-size: 18px;
+  font-weight: 400;
+   
+}
+
+.profil-dropdown .dropdown-arrow {
+  width: 24px;
+  height: 13.71px;
+}

@@ -1,0 +1,8 @@
+.notation-container {
+  display: flex;
+  margin-top: 25px;
+}
+
+.notation-star {
+  height: 24px;
+}
