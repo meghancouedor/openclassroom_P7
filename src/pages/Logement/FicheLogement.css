@@ -68,10 +68,35 @@
 .profil-dropdown .dropdown-txt {
   font-size: 18px;
   font-weight: 400;
-   
 }
 
 .profil-dropdown .dropdown-arrow {
   width: 24px;
   height: 13.71px;
+}
+
+@media screen and (max-width: 750px) {
+  .fiche-logement {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  .fiche-informations {
+    flex-direction: column;
+  }
+
+  .informations-droite {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fiche-title {
+    font-size: 18px;
+    line-height: 25.67px;
+  }
+
+  .fiche-location {
+    font-size: 14px;
+    line-height: 19.96px;
+  }
 }

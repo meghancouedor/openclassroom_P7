@@ -6,3 +6,11 @@
 .notation-star {
   height: 24px;
 }
+
+@media screen and (max-width: 750px) {
+  .notation-star {
+    height: 13px;
+    width: 13px;
+    margin-left: 10px;
+  }
+}

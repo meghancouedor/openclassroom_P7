@@ -1,58 +1,55 @@
 import React, { useState } from "react";
 import "./Carrousel.css";
-import FlecheG from "../../assets/FlecheGauche.svg";
-import FlecheD from "../../assets/FlecheDroite.svg";
+import Arrowleft from "../../assets/FlecheGauche.svg";
+import Arrowright from "../../assets/FlecheDroite.svg";
 
-const Caroussel = ({ thisLogement }) => {
+const Caroussel = ({ dataLogement }) => {
   const [current, setcurrent] = useState(0);
-  const length = thisLogement.pictures.length;
+  const length = dataLogement.pictures.length;
 
   const nextSlide = () => {
     setcurrent(current === length - 1 ? 0 : current + 1);
-    console.log(current);
-    console.log(length);
   };
 
-  const prevSlide = () => {
+  const previousSlide = () => {
     setcurrent(current === 0 ? length - 1 : current - 1);
-    console.log(current);
   };
 
   const showArray = length === 1 ? true : false;
 
   if (
-    !Array.isArray(thisLogement.pictures) ||
-    thisLogement.pictures.length <= 0
+    !Array.isArray(dataLogement.pictures) ||
+    dataLogement.pictures.length <= 0
   ) {
     return null;
   }
 
   return (
-    <div className="slider">
+    <div className="carrousel-container">
       {!showArray ? (
         <div>
           <img
-            onClick={prevSlide}
-            className="left-arrow"
-            src={FlecheG}
-            alt="fleche a gauche"
+            onClick={previousSlide}
+            className="arrow-left"
+            src={Arrowleft}
+            alt="Flèche gauche"
           />
           <img
             onClick={nextSlide}
-            className="right-arrow"
-            src={FlecheD}
-            alt="fleche a droite"
+            className="arrow-right"
+            src={Arrowright}
+            alt="Flèche droite"
           />
         </div>
       ) : null}
-      {thisLogement.pictures.map((slide, index) => {
+      {dataLogement.pictures.map((slide, index) => {
         return (
           <div
             className={index === current ? "slide active" : "slide"}
             key={index}
           >
             {index === current && (
-              <img src={slide} alt="logement" className="image" />
+              <img src={slide} alt="logement" className="carrousel-img" />
             )}
           </div>
         );

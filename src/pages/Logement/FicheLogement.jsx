@@ -3,7 +3,7 @@ import "./FicheLogement.css";
 import datas from "../../data/annonces.json";
 
 //Importation des éléments
-//import Carrousel from "../../components/Carrousel/Carrousel";
+import Carrousel from "../../components/Carrousel/Carrousel";
 import Tags from "../../components/Tags/Tags";
 import Notation from "../../components/Notation/Notation";
 import Dropdown from "../../components/Dropdown/Dropdown";
@@ -15,6 +15,7 @@ function FicheLogement() {
 
   return (
     <div className="fiche-logement">
+      <Carrousel dataLogement={dataLogement} />
       <div className="fiche-informations">
         <div className="informations-gauche">
           <h1 className="fiche-title">{dataLogement.title}</h1>
