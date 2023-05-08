@@ -21,3 +21,22 @@
   border-radius: 25px;
   object-fit: cover;
 }
+
+@media screen and (max-width: 750px) {
+  .arrow-right {
+    width: 11.67px;
+    height: 19.8px;
+    top: 45%;
+  }
+
+  .arrow-left {
+    width: 11.67px;
+    height: 19.8px;
+    top: 45%;
+  }
+
+  .carrousel-img {
+    border-radius: 10px;
+    height: 255px;
+  }
+}

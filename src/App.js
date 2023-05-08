@@ -10,9 +10,9 @@ import Footer from "./components/Footer/Footer";
 import "./style/index.css";
 
 //Import pages
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Error from "./pages/Error";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Error from "./pages/Error/Error";
 import FicheLogement from "./pages/Logement/FicheLogement";
 
 function App() {

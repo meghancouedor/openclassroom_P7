@@ -75,7 +75,7 @@
   height: 13.71px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
   .fiche-logement {
     margin-right: 2rem;
     margin-left: 2rem;
@@ -98,5 +98,38 @@
   .fiche-location {
     font-size: 14px;
     line-height: 19.96px;
+  }
+
+  .profil-name {
+    font-size: 12px;
+    line-height: 17.11px;
+    width: 70px;
+  }
+
+  .profil-photo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .profil-dropdown {
+    flex-direction: column;
+  }
+
+  .profil-dropdown > .dropdown-container {
+    width: 100%;
+  }
+
+  .profil-dropdown .dropdown-title {
+    font-size: 13px;
+  }
+
+  .profil-dropdown .dropdown-txt {
+    font-size: 12px;
+    line-height: 17.11px;
+  }
+
+  .profil-dropdown .dropdown-arrow {
+    width: 16px;
+    height: 9.14px;
   }
 }
