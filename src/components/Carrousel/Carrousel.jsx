@@ -55,7 +55,7 @@ const Caroussel = ({ dataLogement }) => {
         );
       })}
 
-      <p className="current">
+      <p className="carrousel-number">
         {current + 1}/{length}
       </p>
     </div>

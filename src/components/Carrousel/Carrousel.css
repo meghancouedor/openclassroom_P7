@@ -22,21 +22,46 @@
   object-fit: cover;
 }
 
+.carrousel-number {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+}
+
+p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+}
+
+@media screen and (max-width: 1278px) {
+  .carrousel-number {
+    top: 90%;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .arrow-right {
     width: 11.67px;
     height: 19.8px;
     top: 45%;
+    left: 90%;
   }
 
   .arrow-left {
     width: 11.67px;
     height: 19.8px;
     top: 45%;
+    left: 8%;
   }
 
   .carrousel-img {
     border-radius: 10px;
     height: 255px;
+  }
+
+  .carrousel-number {
+    display: none;
   }
 }

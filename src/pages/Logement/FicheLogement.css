@@ -1,6 +1,6 @@
 .fiche-logement {
-  margin-right: 4rem;
-  margin-left: 4rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .fiche-informations {
@@ -49,6 +49,10 @@
   border-radius: 50%;
 }
 
+li {
+  list-style-type: none;
+}
+
 .profil-dropdown {
   display: flex;
   justify-content: space-between;
@@ -75,6 +79,30 @@
   height: 13.71px;
 }
 
+@media screen and (max-width: 750px) {
+  .profil-dropdown {
+    flex-direction: column;
+  }
+
+  .profil-dropdown > .dropdown-container {
+    width: 100%;
+  }
+
+  .profil-dropdown .dropdown-title {
+    font-size: 13px;
+  }
+
+  .profil-dropdown .dropdown-txt {
+    font-size: 12px;
+    line-height: 17.11px;
+  }
+
+  .profil-dropdown .dropdown-arrow {
+    width: 16px;
+    height: 9.14px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .fiche-logement {
     margin-right: 2rem;
@@ -87,6 +115,7 @@
 
   .informations-droite {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
   }
 
@@ -109,27 +138,5 @@
   .profil-photo {
     width: 32px;
     height: 32px;
-  }
-
-  .profil-dropdown {
-    flex-direction: column;
-  }
-
-  .profil-dropdown > .dropdown-container {
-    width: 100%;
-  }
-
-  .profil-dropdown .dropdown-title {
-    font-size: 13px;
-  }
-
-  .profil-dropdown .dropdown-txt {
-    font-size: 12px;
-    line-height: 17.11px;
-  }
-
-  .profil-dropdown .dropdown-arrow {
-    width: 16px;
-    height: 9.14px;
   }
 }

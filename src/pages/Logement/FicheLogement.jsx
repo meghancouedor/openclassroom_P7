@@ -13,6 +13,11 @@ function FicheLogement() {
   const idLogement = useParams();
   const dataLogement = datas.find((logement) => logement.id === idLogement.id);
 
+  //Récupération des datas équipements
+  const dataEquipments = dataLogement.equipments.map((equipment, index) => {
+    return <li key={index}>{equipment}</li>;
+  });
+
   return (
     <div className="fiche-logement">
       <Carrousel dataLogement={dataLogement} />
@@ -42,17 +47,11 @@ function FicheLogement() {
       </div>
       <div className="profil-dropdown">
         <Dropdown titre="Description" description={dataLogement.description} />
-        <Dropdown titre="Équipements" description={dataLogement.equipments} />
+        <Dropdown titre="Équipements" description={dataEquipments} />
       </div>
     </div>
   );
 }
 
-//Dropdown autre méthode pour retour automatique à la ligne
-//  {
-//content.map((element, index) => {
-//return (<p className='equipement-content' key={"equip-"+index.toString()}>{element}</p>)
-//})
-//}
 
 export default FicheLogement;
