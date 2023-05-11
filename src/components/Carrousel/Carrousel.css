@@ -24,7 +24,7 @@
 
 .carrousel-number {
   position: absolute;
-  top: 80%;
+  top: 88%;
   left: 50%;
 }
 
@@ -37,7 +37,7 @@ p {
 
 @media screen and (max-width: 1278px) {
   .carrousel-number {
-    top: 90%;
+    top: 99%;
   }
 }
 

@@ -1,4 +1,4 @@
-//Déclaration des routes
+
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import "./Nav.css";

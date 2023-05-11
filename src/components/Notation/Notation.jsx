@@ -18,7 +18,7 @@ function Notation({ score }) {
             alt="Etoile pleine"
           />
         ) : (
-          //affichage conditionnel des étoiles de score, pleine ou vide selon le score passé en props
+          //affichage des étoiles, pleine ou vide selon le score
           <img
             key={level.toString()}
             className="notation-star"
