@@ -24,3 +24,33 @@
   color: #ff6060;
   font-weight: 500;
 }
+
+@media screen and (max-width: 1000px) {
+  .titre-404 {
+    margin-top: 7rem;
+    font-size: 96px;
+    line-height: 136.9px;
+  }
+
+  .texte-404 {
+    font-size: 18px;
+    line-height: 25.67px;
+  }
+
+  .link-404 {
+    margin-top: 7rem;
+    margin-bottom: 8rem;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .titre-404 {
+    margin-top: 3rem;
+  }
+
+  .link-404 {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+  }
+}

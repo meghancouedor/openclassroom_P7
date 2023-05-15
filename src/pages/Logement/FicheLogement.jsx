@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import "./FicheLogement.css";
 import datas from "../../data/annonces.json";
 
@@ -11,7 +11,11 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 function FicheLogement() {
   //Récupération de l'id et données
   const idLogement = useParams();
+
   const dataLogement = datas.find((logement) => logement.id === idLogement.id);
+  if (dataLogement === undefined) {
+    return <Navigate replace to="/404" />;
+  }
 
   //Récupération des datas équipements
   const dataEquipments = dataLogement.equipments.map((equipment, index) => {
@@ -52,6 +56,5 @@ function FicheLogement() {
     </div>
   );
 }
-
 
 export default FicheLogement;

@@ -1,10 +1,15 @@
+.carrousel-container {
+  position: relative;
+}
+
 .arrow-left {
   cursor: pointer;
   position: absolute;
   width: 46.68px;
   height: 79.2px;
-  left: 7%;
-  top: 50%;
+  z-index: 1;
+  left: 5%;
+  top: 45%;
 }
 
 .arrow-right {
@@ -12,48 +17,61 @@
   position: absolute;
   width: 46.68px;
   height: 79.2px;
-  top: 50%;
-  right: 7%;
+  z-index: 1;
+  right: 5%;
+  top: 45%;
 }
 
 .carrousel-img {
+  z-index: 0;
+
   height: 415px;
   border-radius: 25px;
   object-fit: cover;
 }
 
 .carrousel-number {
+  z-index: 1;
   position: absolute;
-  top: 88%;
+  bottom: 25px;
+
   left: 50%;
 }
 
-p {
+.carrousel-container p {
   color: #ffffff;
   font-size: 18px;
   font-weight: 500;
   line-height: 25.67px;
 }
 
-@media screen and (max-width: 1278px) {
-  .carrousel-number {
-    top: 99%;
+@media screen and (max-width: 1050px) {
+  .arrow-right {
+    width: 30px;
+  }
+
+  .arrow-left {
+    width: 30px;
   }
 }
 
 @media screen and (max-width: 750px) {
+  .carrousel-container {
+    margin-top: 22px;
+  }
+
   .arrow-right {
     width: 11.67px;
     height: 19.8px;
+    right: 5%;
     top: 45%;
-    left: 90%;
   }
 
   .arrow-left {
     width: 11.67px;
     height: 19.8px;
+    left: 5%;
     top: 45%;
-    left: 8%;
   }
 
   .carrousel-img {

@@ -39,3 +39,28 @@
   margin-top: -10px;
   padding: 30px 20px 20px 20px;
 }
+
+@media screen and (max-width: 1000px) {
+  .dropdown-container {
+    width: 100%;
+  }
+
+  .dropdown-banner {
+    height: 30px;
+  }
+
+  .dropdown-title {
+    font-size: 13px;
+    line-height: 18.54px;
+  }
+
+  .dropdown-arrow {
+    width: 16px;
+    margin-right: 0;
+  }
+
+  .dropdown-txt {
+    font-size: 12px;
+    line-height: 17.11px;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./Carrousel.css";
 import Arrowleft from "../../assets/FlecheGauche.svg";
 import Arrowright from "../../assets/FlecheDroite.svg";
@@ -40,6 +41,10 @@ const Caroussel = ({ dataLogement }) => {
             src={Arrowright}
             alt="Flèche droite"
           />
+
+          <p className="carrousel-number">
+            {current + 1}/{length}
+          </p>
         </div>
       ) : null}
       {dataLogement.pictures.map((slide, index) => {
@@ -54,10 +59,6 @@ const Caroussel = ({ dataLogement }) => {
           </div>
         );
       })}
-
-      <p className="carrousel-number">
-        {current + 1}/{length}
-      </p>
     </div>
   );
 };

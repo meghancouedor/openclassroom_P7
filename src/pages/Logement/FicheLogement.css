@@ -73,6 +73,7 @@ li {
 .profil-dropdown .dropdown-txt {
   font-size: 18px;
   font-weight: 400;
+  min-height: 230px;
 }
 
 .profil-dropdown .dropdown-arrow {
@@ -96,6 +97,7 @@ li {
   .profil-dropdown .dropdown-txt {
     font-size: 12px;
     line-height: 17.11px;
+    min-height: 130px;
   }
 
   .profil-dropdown .dropdown-arrow {

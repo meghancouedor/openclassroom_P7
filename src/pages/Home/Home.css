@@ -2,3 +2,11 @@
   margin-right: 3rem;
   margin-left: 3rem;
 }
+
+@media screen and (max-width: 600px) {
+  .home-content {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    align-items: center;
+  }
+}

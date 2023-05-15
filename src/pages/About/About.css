@@ -1,4 +1,41 @@
 .about-content {
-    margin-right: 3rem;
-    margin-left: 3rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+.about-content .dropdown-container {
+  width: 80%;
+  margin: auto;
+}
+
+.about-content .dropdown-banner {
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 1100px) {
+  .about-content .banner-container {
+    height: 200px;
   }
+
+  .about-content .banner-filter {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-content {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .about-content .dropdown-container {
+    width: 100%;
+  }
+  .about-content .banner-container {
+    height: 223px;
+  }
+
+  .about-content .banner-filter {
+    height: 223px;
+  }
+}
